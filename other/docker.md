@@ -56,6 +56,10 @@ docker run -itd --name mongo -p 27017:27017 mongo --auth
 -p 27017:27017 ：映射容器服务的 27017 端口到宿主机的 27017 端口。外部可以直接通过 宿主机 ip:27017 访问到 mongo 的服务。
 --auth：需要密码才能访问容器服务。
 */
+
+# 进入容器
+docker exec -it 6bc1d4ce9136 /bin/sh;
+
 ```
 
 停止容器
@@ -65,6 +69,10 @@ docker run -itd --name mongo -p 27017:27017 mongo --auth
 启动容器
 
 > docker start mongo
+
+
+
+
 
 
 
@@ -97,6 +105,7 @@ docker run -itd --name redis6379 -p 6379:6379 redis
 docker exec -it 容器ID /bin/bash  
 # redis-cli 连接 redis
 docker exec -it 容器ID redis-cli
+docker exec -it e1556b96ba1d redis-cli
 auth 密码
 # 设置redis连接密码
 config set re quirepass 密码

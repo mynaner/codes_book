@@ -148,3 +148,47 @@ git remote add origin git@gitee.com:SALONE/kaka_mp.git
 ```
 
 http://192.168.0.80/KK/KK_WebFront/mp_demo.git
+
+
+
+
+
+> 添加远程仓库
+>
+> git remote add origin https://github.com/fengcangjun/learngit.git
+
+
+
+# 修改gitignore不生效
+
+
+
+git rm -r --cached .
+
+git add .
+
+git commit -m 'update .gitignore'
+
+
+
+
+
+
+
+
+
+### tag
+
+```shell
+# 查看
+git tag
+
+# 创建tag
+git tag -a v2.1.5
+git tag -a v2.1.5 -m 'version 2.1.5'
+
+# 上传tag
+git push origin --tags # 所以本地tag
+git push origin v2.1.5 # 单个tag
+```
+
